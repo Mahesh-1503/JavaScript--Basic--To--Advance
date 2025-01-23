@@ -1,0 +1,14 @@
+{
+    "name": "Mahesh",
+    "age": 20,
+    "isProgrammer": true,
+    "languages": ["JavaScript", "Python", "Java"],
+    "email": "q2b7y@example.com",
+    "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+    }
+    
+}

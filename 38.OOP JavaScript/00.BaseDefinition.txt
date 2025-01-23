@@ -1,0 +1,9 @@
+OOP ?
+Object-Oriented Programming (OOP) is a programming language model/style organized
+around objects rather than "actions" and data rather than logic.
+
+JavaScript is a versatile and dynamic programming language that
+supports multiple paradigms, including procedural, functional, and
+object-oriented programming. While JavaScript is not a purely object-oriented
+language like java or C++, it provides the tools and features to 
+implement OOP concepts effectively
