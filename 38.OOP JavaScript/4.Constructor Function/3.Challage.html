@@ -1,0 +1,24 @@
+<!-- 1.create a person constructor which has parameters of (name, age, gender)
+2.Access parameters values to call object.
+3.Create a method name (info) , which will just print the info.
+4.Create a few instances 
+5.Access each property -->
+
+<script>
+    function Person(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.info = function () {
+            console.log(`Name: ${this.name}, Age: ${this.age}, Gender: ${this.gender}`);
+        }
+    }
+    //creating Object instances
+    const person1 = new Person('John', 25, 'Male');
+    const person2 = new Person('Jane', 30, 'Female');
+    const person3 = new Person('Bob', 35, 'Male');
+
+    person1.info();
+    person2.info();
+    person3.info();
+</script>

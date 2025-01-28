@@ -1,0 +1,18 @@
+<script>
+    function CreatePeople(firstName, lastName, pl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.pl = pl;
+
+        this.info = function(){
+            console.log(`My name is ${this.firstName} ${this.lastName} and I love ${this.pl}`);
+        }
+    }
+
+    const person1 = new CreatePeople('John', 'Doe', 'JavaScript');
+    console.log(person1);
+    person1.info();
+    const person2 = new CreatePeople('Mahesh', 'kumar', 'Python');
+    console.log(person2);
+    person2.info();
+</script>

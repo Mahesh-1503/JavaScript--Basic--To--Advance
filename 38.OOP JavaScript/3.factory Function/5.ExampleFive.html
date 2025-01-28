@@ -1,0 +1,26 @@
+<!-- 5. Factory Function for Custom Objects
+A customizable car factory with unique behaviors. -->
+
+<script>
+    function createCar(make, model, year) {
+        return {
+            make,
+            model,
+            year,
+            start() {
+                console.log(`${this.make} ${this.model} is starting...`);
+            },
+            drive() {
+                console.log(`${this.make} ${this.model} is driving...`);
+            }
+        };
+    }
+
+    const car1 = createCar("Toyota", "Corolla", 2021);
+    const car2 = createCar("Tesla", "Model S", 2023);
+
+    car1.start(); // Output: Toyota Corolla is starting...
+    car2.drive(); // Output: Tesla Model S is driving...
+
+</script>
+

@@ -1,0 +1,29 @@
+<!-- 2. Factory Function with Private Variables
+Encapsulating internal logic or data. -->
+
+<script>
+    function createCounter() {
+        let count = 0;
+
+        return {
+            increment() {
+                count++;
+                console.log(`Count: ${count}`);
+            },
+            decrement() {
+                count--;
+                console.log(`Count: ${count}`);
+            },
+            getCount() {
+                return count;
+            }
+        }
+    }
+
+    const counter = createCounter();
+    counter.increment(); // 1
+    counter.increment(); // 2
+    counter.increment(); // 3
+    counter.decrement(); // 2
+    console.log("counter = " +counter.getCount()); // 2
+</script>

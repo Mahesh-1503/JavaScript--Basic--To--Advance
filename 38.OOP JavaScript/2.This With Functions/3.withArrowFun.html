@@ -1,0 +1,12 @@
+<script>
+    const obj = {
+        firstName: "Mahesh",
+        lastName: "Kumar",
+        fullName: () => {
+            return this.firstName + " " + this.lastName; //this refers to window
+        },
+    };
+
+    const res = obj.fullName();
+    console.log(res); // undefined
+</script>

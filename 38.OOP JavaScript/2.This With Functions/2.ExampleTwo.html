@@ -1,0 +1,12 @@
+<script>
+    const obj = {
+        firstName: "Mahesh",
+        lastName: "Kumar",
+        fullName: function () {
+            return this.firstName + " " + this.lastName; //this keyword refers to object
+        },
+    };
+
+    const res = obj.fullName();
+    console.log(res); // Mahesh Kumar
+</script>

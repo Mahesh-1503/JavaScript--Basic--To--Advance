@@ -1,0 +1,30 @@
+<!-- 4. Factory Function for Managing State
+An example of a task manager with methods to add, remove, and list tasks. -->
+
+<script>
+    function createTaskManager() {
+        let tasks = [];
+        return {
+            addTask(task) {
+                tasks.push(task);
+                console.log(`Task added: ${task}`);
+            },
+            removeTask(task) {
+                tasks = tasks.filter(t => t !== task);
+                console.log(`Task removed: ${task}`);
+            },
+            listTasks() {
+                console.log("Tasks: ", tasks);
+            }
+        }
+    }
+
+
+    const taskManager = createTaskManager();
+taskManager.addTask("Learn JavaScript");
+taskManager.addTask("Build a project");
+taskManager.listTasks(); // Output: Tasks: ['Learn JavaScript', 'Build a project']
+taskManager.removeTask("Learn JavaScript");
+taskManager.listTasks(); // Output: Tasks: ['Build a project']
+
+</script>

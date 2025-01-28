@@ -1,0 +1,40 @@
+<!-- 3. Factory Function with Conditional Logic
+Creating objects with different behavior based on input. -->
+
+<script>
+    function createShape(type) {
+        if (type === "circle") {
+            return {
+                type,
+                draw(){
+                    console.log("Drawing a circle");
+                }
+            }
+        } else if (type === "square") {
+            return{
+                type,
+                draw(){
+                    console.log("Drawing a square");
+                }
+            }
+        } else{
+            return{
+                type,
+                draw(){
+                    console.log("Drawing a Unknown shape");
+                }
+            }
+        }
+
+        
+    }
+
+    const circle = createShape("circle");
+    circle.draw(); // Drawing a circle
+
+    const square = createShape("square");
+    square.draw(); // Drawing a square
+
+    const triangle = createShape("triangle");
+    triangle.draw(); // Drawing a Unknown shape
+</script>
