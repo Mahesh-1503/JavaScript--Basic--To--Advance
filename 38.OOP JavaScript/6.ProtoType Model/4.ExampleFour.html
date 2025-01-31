@@ -1,0 +1,13 @@
+<script>
+    function Person(firstName, lastName, pl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.pl = pl;
+    }
+
+    const huxn = new Person('Huxn', 'WebDev', 'JavaScript');
+    console.log(huxn);
+    console.log(huxn.__proto__);
+    console.log(huxn.__proto__.__proto__);
+    console.log(huxn.__proto__.__proto__.__proto__);//null
+</script>
