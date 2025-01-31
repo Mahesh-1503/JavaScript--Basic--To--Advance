@@ -1,0 +1,11 @@
+<script>
+    console.log(String.prototype);
+    String.prototype.hello = function(){
+        console.log(this)
+        console.log(this.toUpperCase());
+    }
+
+    console.log('hello and welcome'.hello())
+</script>
+
+<!-- 12:46:26 -->

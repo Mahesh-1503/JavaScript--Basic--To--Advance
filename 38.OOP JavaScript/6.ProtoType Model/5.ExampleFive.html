@@ -1,0 +1,15 @@
+<script>
+    //*****Changing the built-in Method*****//
+    console.log(Array.prototype);
+
+    Array.prototype.pop = function(){
+        return "POP IT UP BABE";
+    }
+    const myArr = ["One", "Two", "Three"];
+    console.log(myArr.pop());
+    console.log(myArr);
+
+    const myArr2 = ["One", "Two", "Three"];
+    console.log(myArr2.pop());
+    console.log(myArr2);
+</script>
