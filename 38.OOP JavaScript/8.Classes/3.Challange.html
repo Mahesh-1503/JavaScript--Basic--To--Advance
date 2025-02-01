@@ -1,0 +1,40 @@
+<!-- 1. Create a class name "Hero", properties (name,  level)
+2. Create a greet method which will  just greet
+3. Create Instances of "Hero" class
+4. Create New class name "Mega", inherit properties from "Hero" class & provide property of spell
+5. Create instance of "Mega" class -->
+<script>
+    // Step 1: Create a class named "Hero" with properties (name, level)
+    class Hero {
+        constructor(name, level) {
+            // Initialize the properties for the Hero class
+            this.name = name; // Name of the hero
+            this.level = level; // Level of the hero
+        }
+
+        // Step 2: Create a greet method that will greet the hero
+        greet() {
+            console.log(`Hi, I am ${this.name}`); // Greet using the hero's name
+        }
+    }
+
+    // Step 3: Create instances of the "Hero" class
+    const hero1 = new Hero("Superman", 10); // Create a hero named "Superman" with level 10
+    console.log(hero1); // Output the hero1 object to the console
+    hero1.greet(); // Call the greet method to display a greeting for hero1
+
+    // Step 4: Create a new class named "Mega" that inherits from the "Hero" class
+    class Mega extends Hero {
+        constructor(name, level, spell) {
+            super(name, level); // Call the parent class constructor to inherit name and level
+            this.spell = spell; // Add a new property "spell" specific to the Mega class
+        }
+    }
+
+    // Step 5: Create an instance of the "Mega" class
+    const hero2 = new Mega("Batman", 15, "Darkness"); // Create a mega hero named "Batman" with level 15 and spell "Darkness"
+    console.log(hero2); // Output the hero2 object to the console
+    hero2.greet(); // Call the greet method inherited from the Hero class to display a greeting for hero2
+</script>
+
+<!-- 13:10:00 -->

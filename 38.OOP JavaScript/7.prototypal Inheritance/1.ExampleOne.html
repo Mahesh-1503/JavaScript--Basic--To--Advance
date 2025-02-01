@@ -1,0 +1,23 @@
+<!-- Basic Prototypal Inheritance -->
+
+<script>
+    // Create a parent object
+    const animal = {
+        type: 'unknown',
+        speak() {
+            console.log(`The ${this.type} makes a sound.`);
+        }
+    };
+
+    // Create a child object that inherits from the parent
+    const dog = Object.create(animal); // dog's prototype is set to `animal`
+    dog.type = 'dog'; // Override the `type` property
+
+    dog.speak(); // Output: "The dog makes a sound."
+</script>
+
+<!-- Explanation:
+We create an object animal with a type property and a speak method.
+Using Object.create(animal), we create a new object dog whose prototype is animal.
+When we call dog.speak(), JavaScript first looks for the speak method on the dog object. 
+Since it doesn't find it there, it looks up the prototype chain and finds it in the animal object. -->

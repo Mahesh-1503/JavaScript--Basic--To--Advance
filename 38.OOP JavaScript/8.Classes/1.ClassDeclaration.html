@@ -1,0 +1,36 @@
+<script>
+    // Class Declaration
+    class Person {
+        constructor(firstName, lastName, age) {
+            // Instance Members
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+
+        // Prototype Method: printUserInfo
+        printUserInfo() {
+            return `Name: ${this.firstName} ${this.lastName}, Age: ${this.age}`;
+        }
+
+        // Prototype Method: greet
+        greet() {
+            return `Hello There! I'm ${this.firstName} ${this.lastName} and I'm ${this.age} years old.`;
+        }
+    }
+
+    // Create an instance of the class
+    const person1 = new Person('Mahesh', 'Kumar', 20);
+
+    // Output the instance
+    console.log(person1); 
+    // Output: Person { firstName: 'Mahesh', lastName: 'Kumar', age: 20 }
+
+    // Call the printUserInfo method
+    console.log(person1.printUserInfo()); 
+    // Output: Name: Mahesh Kumar, Age: 20
+
+    // Call the greet method
+    console.log(person1.greet()); 
+    // Output: Hello There! I'm Mahesh Kumar and I'm 20 years old.
+</script>

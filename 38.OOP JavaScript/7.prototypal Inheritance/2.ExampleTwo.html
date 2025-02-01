@@ -1,0 +1,30 @@
+<!-- Example 2: Constructor Functions and prototype
+When using constructor functions, JavaScript automatically sets up the prototype chain for you. -->
+
+<script>
+    // Define a constructor function
+    function Animal(type) {
+        this.type = type;
+    }
+
+    // Add a method to the prototype of the constructor
+    Animal.prototype.speak = function () {
+        console.log(`The ${this.type} makes a sound.`);
+    };
+
+    // Create an instance of Animal
+    const dog = new Animal('dog');
+    dog.speak(); // Output: "The dog makes a sound."
+
+    // Check the prototype chain
+    console.log(dog.__proto__ === Animal.prototype); // true
+    console.log(dog.__proto__.__proto__ === Object.prototype); // true
+    console.log(dog.__proto__.__proto__.__proto__ === null); // true
+</script>
+
+<!-- Explanation:
+We define a constructor function Animal that takes a type parameter and assigns it to the instance.
+We add a speak method to Animal.prototype. All instances of Animal will inherit this method.
+When we create a new instance of Animal using new Animal('dog'), the dog object inherits from Animal.prototype.
+The prototype chain looks like this:
+dog → Animal.prototype → Object.prototype → null. -->

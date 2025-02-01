@@ -1,0 +1,46 @@
+<!-- Example 3: Inheriting from Another Constructor Function -->
+
+<script>
+    // Parent constructor function
+    function Animal(type) {
+        this.type = type;
+    }
+
+    Animal.prototype.speak = function () {
+        console.log(`The ${this.type} makes a sound.`);
+    };
+
+    // Child constructor function
+    function Dog(name, breed) {
+        Animal.call(this, 'dog'); // Call the parent constructor
+        this.name = name;
+        this.breed = breed;
+    }
+
+    // Set up the prototype chain
+    Dog.prototype = Object.create(Animal.prototype);
+    Dog.prototype.constructor = Dog;
+
+    // Add a method specific to Dog
+    Dog.prototype.bark = function () {
+        console.log(`${this.name} barks loudly!`);
+    };
+
+    // Create an instance of Dog
+    const myDog = new Dog('Buddy', 'Golden Retriever');
+    myDog.speak(); // Output: "The dog makes a sound."
+    myDog.bark();  // Output: "Buddy barks loudly!"
+</script>
+
+<!-- 
+Explanation:
+We define a parent constructor Animal and a child constructor Dog.
+Inside the Dog constructor, we call Animal.call(this, 'dog') to invoke the parent constructor and set the type property.
+We set up the prototype chain using Object.create(Animal.prototype) so that Dog inherits from Animal.
+We add a bark method to Dog.prototype, which is specific to Dog instances.
+The prototype chain for myDog looks like this:
+myDog → Dog.prototype → Animal.prototype → Object.prototype → null.
+
+-->
+
+<!-- 12:56:30 -->
