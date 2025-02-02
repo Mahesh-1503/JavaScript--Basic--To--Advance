@@ -1,0 +1,35 @@
+<script>
+    //In javascript, we can achieve encapsulation by using closures to create 
+    //private members(variables and functions) within an object.
+
+    function Counter() {
+        let _count = 0;// Private variable
+        
+
+        //Public method that can access and modify the private variable
+        this.increment = function () {
+            _count++;
+        }
+
+        this.decrement = function () {
+            _count--;
+        }
+
+        this.getCount = function () {
+            return _count;
+        }
+    }
+
+    const counter = new Counter();
+    console.log(counter._count);//undefined (hidden implementation detail)
+    console.log(counter.getCount());
+    counter.increment();//1
+    counter.increment();//2
+    counter.increment();//3
+    console.log(counter.getCount());//3
+    counter.decrement();//2
+    console.log(counter.getCount());//2
+
+</script>
+
+<!-- 13:35:00 -->
