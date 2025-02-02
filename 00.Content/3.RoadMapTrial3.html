@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Web Dev Roadmap</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #001a00;
+      color: #00ff9f;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: all 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      background: #002200;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid #00ff9f;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00ff9f, transparent);
+      animation: scanline 4s linear infinite;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #00ff9f;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #00ff88;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      text-shadow: 0 0 5px #00ff9f;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: #002200;
+      color: #00ff9f;
+      border: 2px solid #00ff9f;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .theme-toggle:hover {
+      background: #00ff9f;
+      color: #002200;
+      box-shadow: 0 0 20px #00ff9f;
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      background: #002200;
+      margin: 2rem 0;
+      padding: 2rem;
+      border: 1px solid #00ff9f;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+      transition: all 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 0 30px #00ff9f33;
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #00ff9f;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #00ff9f;
+      padding-left: 1rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3 {
+      color: #00ff9f;
+      margin: 1.5rem 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: #00ff9f;
+    }
+
+    /* Icons */
+    .tech-icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+      color: #00ff9f;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-icon:hover {
+      transform: scale(1.2);
+    }
+
+    /* Technology-Specific Icons */
+    .html-icon { color: #e34c26; }
+    .css-icon { color: #264de4; }
+    .js-icon { color: #f0db4f; }
+    .node-icon { color: #68a063; }
+    .react-icon { color: #61dbfb; }
+    .python-icon { color: #306998; }
+    .git-icon { color: #f1502f; }
+    .aws-icon { color: #ff9900; }
+    .docker-icon { color: #0db7ed; }
+    .graphql-icon { color: #e535ab; }
+    .db-icon { color: #4db33d; }
+
+    /* Light Theme */
+    body.light-theme {
+      background-color: #f5f5f5;
+      color: #1a1a1a;
+    }
+
+    body.light-theme header {
+      background: #e0e0e0;
+      border-color: #1a1a1a;
+    }
+
+    body.light-theme section {
+      background: #ffffff;
+      border-color: #1a1a1a;
+      color: #1a1a1a;
+    }
+
+    body.light-theme h2,
+    body.light-theme h3 {
+      color: #1a1a1a;
+    }
+
+    body.light-theme .theme-toggle {
+      background: #e0e0e0;
+      color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+
+    body.light-theme .theme-toggle:hover {
+      background: #1a1a1a;
+      color: #e0e0e0;
+    }
+
+    /* Animations */
+    @keyframes scanline {
+      0% { left: -100% }
+      100% { left: 100% }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>// FULL_STACK_ROADMAP</h1>
+    <p>CYBER DEVELOPER PROTOCOL v2.3.5</p>
+  </header>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+    DARK MODE
+  </button>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2><i class="fas fa-code tech-icon"></i>Frontend Development</h2>
+      <p>
+        <i class="fab fa-html5 tech-icon html-icon"></i>HTML5
+        <i class="fab fa-css3-alt tech-icon css-icon"></i>CSS3
+        <i class="fab fa-js-square tech-icon js-icon"></i>JavaScript
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-mobile-alt tech-icon"></i>Responsive Design</h2>
+      <p>
+        <i class="fab fa-bootstrap tech-icon"></i>Bootstrap
+        <i class="fas fa-th tech-icon"></i>Grid
+        <i class="fas fa-expand-arrows-alt tech-icon"></i>Flexbox
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-code-branch tech-icon"></i>Version Control</h2>
+      <p>
+        <i class="fab fa-git-alt tech-icon git-icon"></i>Git
+        <i class="fab fa-github tech-icon"></i>GitHub
+      </p>
+    </section>
+
+<section>
+  <h2><i class="fas fa-server tech-icon"></i>Backend Development</h2>
+  <p>
+    <i class="fab fa-node tech-icon node-icon"></i>Node.js
+    <i class="fas fa-bolt tech-icon"></i>Express.js
+  </p>
+</section>
+
+    <section>
+      <h2><i class="fas fa-database tech-icon db-icon"></i>Databases</h2>
+      <p>
+        <i class="fas fa-leaf tech-icon"></i>MongoDB
+        <i class="fas fa-database tech-icon"></i>PostgreSQL
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-plug tech-icon"></i>APIs</h2>
+      <p>
+        <i class="fas fa-cloud tech-icon"></i>REST
+        <i class="fab fa-graphql tech-icon graphql-icon"></i>GraphQL
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-rocket tech-icon"></i>Deployment</h2>
+      <p>
+        <i class="fab fa-aws tech-icon aws-icon"></i>AWS
+        <i class="fas fa-box tech-icon"></i>Heroku
+        <i class="fab fa-docker tech-icon docker-icon"></i>Docker
+      </p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-cogs tech-icon"></i>Advanced Topics</h2>
+      <p>
+        <i class="fab fa-react tech-icon react-icon"></i>React
+        <i class="fab fa-vuejs tech-icon"></i>Vue.js
+        <i class="fas fa-infinity tech-icon"></i>WebAssembly
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('i');
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      if (body.classList.contains('light-theme')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i> LIGHT MODE';
+      } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i> DARK MODE';
+      }
+    });
+  </script>
+</body>
+</html>

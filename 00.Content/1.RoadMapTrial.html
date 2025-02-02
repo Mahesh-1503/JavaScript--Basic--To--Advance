@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Web Development Roadmap</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      color: #ffffff;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #bb86fc;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      color: #e0e0e0;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: #bb86fc;
+      color: #121212;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: #9c6fdb;
+      transform: scale(1.05);
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #bb86fc;
+      border-bottom: 2px solid #bb86fc;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #bb86fc;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #e0e0e0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      padding: 0.5rem 0;
+      color: #e0e0e0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #bb86fc;
+    }
+
+    /* Buttons and Links */
+    a {
+      color: #bb86fc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #9c6fdb;
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Light Theme Styles */
+    body.light-theme {
+      background-color: #f5f5f5;
+      color: #121212;
+    }
+
+    body.light-theme header {
+      background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+      color: #121212;
+    }
+
+    body.light-theme header h1 {
+      color: #1e88e5;
+    }
+
+    body.light-theme section {
+      background: #ffffff;
+      color: #121212;
+    }
+
+    body.light-theme h2,
+    body.light-theme h3 {
+      color: #1e88e5;
+    }
+
+    body.light-theme p,
+    body.light-theme ul li {
+      color: #121212;
+    }
+
+    body.light-theme a {
+      color: #1e88e5;
+    }
+
+    body.light-theme .theme-toggle {
+      background: #1e88e5;
+      color: #ffffff;
+    }
+
+    body.light-theme .theme-toggle:hover {
+      background: #42a5f5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Full Stack Web Development Roadmap</h1>
+    <p>Your Complete Guide to Becoming a Full Stack Developer</p>
+  </header>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle">Switch to Light Mode</button>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>What is Web Development?</h2>
+      <p>Web development refers to the process of building websites and web applications. It involves both frontend (client-side) and backend (server-side) development.</p>
+    </section>
+
+    <section>
+      <h2>Why Learn Web Development?</h2>
+      <ul>
+        <li>Create interactive and dynamic websites.</li>
+        <li>Build scalable web applications for businesses.</li>
+        <li>High demand for web developers in the job market.</li>
+        <li>Opportunities to work remotely or freelance.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Roadmap to Becoming a Full Stack Developer</h2>
+      <h3>1. Frontend Development</h3>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+      <p><strong>Why Learn:</strong> These are the foundational languages of the web. HTML structures content, CSS styles it, and JavaScript adds interactivity.</p>
+
+      <h3>2. Responsive Design</h3>
+      <p><strong>Technologies:</strong> Bootstrap, Flexbox, Grid</p>
+      <p><strong>Why Learn:</strong> Ensures your website looks great on all devices, from mobile phones to desktops.</p>
+
+      <h3>3. Version Control</h3>
+      <p><strong>Technologies:</strong> Git, GitHub</p>
+      <p><strong>Why Learn:</strong> Essential for collaboration and tracking changes in your codebase.</p>
+
+      <h3>4. Backend Development</h3>
+      <p><strong>Technologies:</strong> Node.js, Express.js, Python (Django/Flask)</p>
+      <p><strong>Why Learn:</strong> Powers the server-side logic and database interactions of your application.</p>
+
+      <h3>5. Databases</h3>
+      <p><strong>Technologies:</strong> MongoDB, MySQL, PostgreSQL</p>
+      <p><strong>Why Learn:</strong> Store and manage data efficiently for your applications.</p>
+
+      <h3>6. APIs</h3>
+      <p><strong>Technologies:</strong> REST, GraphQL</p>
+      <p><strong>Why Learn:</strong> Enable communication between different software systems.</p>
+
+      <h3>7. Deployment</h3>
+      <p><strong>Technologies:</strong> AWS, Heroku, Netlify</p>
+      <p><strong>Why Learn:</strong> Deploy your applications so they can be accessed by users worldwide.</p>
+
+      <h3>8. Advanced Topics</h3>
+      <p><strong>Technologies:</strong> React, Angular, Vue.js, Docker, CI/CD</p>
+      <p><strong>Why Learn:</strong> Build modern, scalable, and maintainable applications.</p>
+    </section>
+
+    <section>
+      <h2>Definitions of Key Technologies</h2>
+      <p><strong>HTML:</strong> HyperText Markup Language is used to structure content on the web.</p>
+      <p><strong>CSS:</strong> Cascading Style Sheets is used to style and layout web pages.</p>
+      <p><strong>JavaScript:</strong> A programming language that adds interactivity to websites.</p>
+      <p><strong>Node.js:</strong> A runtime environment that allows you to run JavaScript on the server.</p>
+      <p><strong>MongoDB:</strong> A NoSQL database used for storing unstructured data.</p>
+      <p><strong>React:</strong> A JavaScript library for building user interfaces, especially single-page applications.</p>
+    </section>
+  </main>
+
+  <!-- JavaScript for Theme Toggle -->
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      if (body.classList.contains('light-theme')) {
+        themeToggle.textContent = 'Switch to Dark Mode';
+      } else {
+        themeToggle.textContent = 'Switch to Light Mode';
+      }
+    });
+  </script>
+</body>
+</html>

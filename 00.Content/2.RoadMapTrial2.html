@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Web Dev Roadmap</title>
+  <style>
+    /* Cyberpunk Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #001a00;
+      color: #00ff9f;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Glitch Effect */
+    @keyframes glitch {
+      0% { transform: translate(0) }
+      20% { transform: translate(-2px, 2px) }
+      40% { transform: translate(-2px, -2px) }
+      60% { transform: translate(2px, 2px) }
+      80% { transform: translate(2px, -2px) }
+      100% { transform: translate(0) }
+    }
+
+    /* Header Section */
+    header {
+      background: #002200;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid #00ff9f;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00ff9f, transparent);
+      animation: scanline 4s linear infinite;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #00ff9f;
+      animation: glitch 2s infinite;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #00ff88;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      text-shadow: 0 0 5px #00ff9f;
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      background: #002200;
+      margin: 2rem 0;
+      padding: 2rem;
+      border: 1px solid #00ff9f;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+      transition: all 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 0 30px #00ff9f33;
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #00ff9f;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #00ff9f;
+      padding-left: 1rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: #00ff9f;
+      margin: 1.5rem 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: #00ff9f;
+    }
+
+    /* List Styles */
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      padding: 0.8rem 0;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    ul li::before {
+      content: '▶';
+      color: #00ff9f;
+      position: absolute;
+      left: 0;
+      animation: blink 1s infinite;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: #002200;
+      color: #00ff9f;
+      border: 2px solid #00ff9f;
+      padding: 0.8rem 1.5rem;
+      font-family: 'Courier New', monospace;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .theme-toggle:hover {
+      background: #00ff9f;
+      color: #002200;
+      box-shadow: 0 0 20px #00ff9f;
+    }
+
+    /* Animations */
+    @keyframes scanline {
+      0% { left: -100% }
+      100% { left: 100% }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1 }
+      50% { opacity: 0 }
+    }
+
+    /* Light Theme */
+    body.light-theme {
+      background-color: #000;
+      color: #00ff9f;
+    }
+
+    body.light-theme header {
+      background: #001100;
+    }
+
+    body.light-theme section {
+      background: #000;
+      border-color: #00ff9f;
+    }
+
+    body.light-theme .theme-toggle {
+      background: #000;
+      color: #00ff9f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>// FULL_STACK_ROADMAP</h1>
+    <p>CYBER DEVELOPER PROTOCOL v2.3.5</p>
+  </header>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle">TOGGLE TERMINAL</button>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>// WEB_DEV_DEFINITION</h2>
+      <p>> Building digital infrastructure for the cyber age</p>
+      <p>> Frontend/Backend systems integration</p>
+    </section>
+
+    <section>
+      <h2>// LEARNING_MOTIVATION</h2>
+      <ul>
+        <li>Create cybernetic interfaces</li>
+        <li>Develop encrypted network systems</li>
+        <li>High demand in digital frontier</li>
+        <li>Decentralized development opportunities</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>// DEVELOPMENT_PROTOCOL</h2>
+      <h3>1. FRONTEND SYSTEMS</h3>
+      <p><strong>Core Tech:</strong> HTML5/CSS3/ES6</p>
+      <p><strong>Purpose:</strong> User interface rendering</p>
+
+      <h3>2. RESPONSIVE ARCHITECTURE</h3>
+      <p><strong>Tech Stack:</strong> Grid/Flex/Media Queries</p>
+      <p><strong>Purpose:</strong> Multi-device compatibility</p>
+
+      <h3>3. VERSION CONTROL</h3>
+      <p><strong>System:</strong> Git Protocol</p>
+      <p><strong>Purpose:</strong> Codebase management</p>
+
+      <h3>4. BACKEND INFRASTRUCTURE</h3>
+      <p><strong>Engines:</strong> Node.js/Python/Rust</p>
+      <p><strong>Purpose:</strong> Server-side operations</p>
+
+      <h3>5. DATA STORAGE</h3>
+      <p><strong>Database:</strong> MongoDB/PostgreSQL</p>
+      <p><strong>Purpose:</strong> Secure data management</p>
+
+      <h3>6. API COMMUNICATION</h3>
+      <p><strong>Protocols:</strong> REST/GraphQL</p>
+      <p><strong>Purpose:</strong> System interoperability</p>
+
+      <h3>7. DEPLOYMENT SEQUENCE</h3>
+      <p><strong>Platforms:</strong> AWS/Docker/Heroku</p>
+      <p><strong>Purpose:</strong> Global distribution</p>
+
+      <h3>8. ADVANCED MODULES</h3>
+      <p><strong>Tech:</strong> React/WebAssembly/Web3</p>
+      <p><strong>Purpose:</strong> Next-gen applications</p>
+    </section>
+
+    <section>
+      <h2>// TECH_LEXICON</h2>
+      <p><strong>HTML:</strong> Structural markup language</p>
+      <p><strong>CSS:</strong> Visual styling system</p>
+      <p><strong>JavaScript:</strong> Behavioral scripting</p>
+      <p><strong>Node.js:</strong> Server-side JS runtime</p>
+      <p><strong>MongoDB:</strong> NoSQL database system</p>
+      <p><strong>React:</strong> UI component library</p>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      themeToggle.textContent = body.classList.contains('light-theme') 
+        ? 'ACTIVATE DARK MODE' 
+        : 'ACTIVATE LIGHT MODE';
+    });
+  </script>
+</body>
+</html>
