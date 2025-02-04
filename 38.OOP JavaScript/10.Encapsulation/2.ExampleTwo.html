@@ -1,0 +1,67 @@
+<script>
+    // Define a class named Person to represent a person with name, age, and salary
+    class Person {
+        // Constructor method to initialize the Person object with name, age, and salary
+        constructor(name, age, salary) {
+            // Encapsulate the properties (name, age, salary) within the object
+            this.name = name; // Encapsulate the 'name' property
+            this.age = age;   // Encapsulate the 'age' property
+            this.salary = salary; // Encapsulate the 'salary' property
+        }
+
+        // Method to get and display the name (encapsulated behavior)
+        getName() {
+            console.log(this.name); // Access the encapsulated 'name' property
+        }
+
+        // Method to get and display the age (encapsulated behavior)
+        getAge() {
+            console.log(this.age); // Access the encapsulated 'age' property
+        }
+
+        // Method to get and display the salary (encapsulated behavior)
+        getSalary() {
+            console.log(this.salary); // Access the encapsulated 'salary' property
+        }
+    }
+
+    // Create an instance of the Person class with specific values for name, age, and salary
+    let obj = new Person('John', 30, 5000);
+
+    // Use the encapsulated methods to access and display the encapsulated properties
+    obj.getName();   // Calls the getName method to display the name
+    obj.getAge();    // Calls the getAge method to display the age
+    obj.getSalary(); // Calls the getSalary method to display the salary
+</script>
+
+<!-- Explanation of Encapsulation in This Program:
+Encapsulation of Properties:
+
+The Person class encapsulates the properties (name, age, and salary) within the object. These properties are not directly accessible from outside the class unless explicitly exposed through methods.
+
+For example, the properties name, age, and salary are defined as part of the object's state and are accessed only through the methods (getName, getAge, and getSalary).
+
+Encapsulation of Behavior:
+
+The methods (getName, getAge, and getSalary) encapsulate the behavior of accessing and displaying the properties. This ensures that the internal representation of the data is hidden from the outside world.
+
+For example, the getName method encapsulates the logic of accessing the name property and displaying it. The user of the class doesn't need to know how the name is stored or accessed; they simply call the method.
+
+Controlled Access to Data:
+
+By providing methods to access the properties, the class controls how the data is accessed and displayed. This prevents unauthorized or unintended modifications to the data.
+
+For example, if you wanted to add validation or formatting before displaying the salary, you could modify the getSalary method without affecting the rest of the code.
+
+Data Hiding:
+
+The properties (name, age, and salary) are not directly exposed outside the class. Instead, they are accessed through methods, which hides the internal implementation details.
+
+For example, if you tried to access obj.name directly, it would work in this case (since JavaScript doesn't enforce strict encapsulation), but the use of methods like getName is a better practice for encapsulation.
+
+Summary:
+Encapsulation in this program is achieved by bundling the properties (name, age, and salary) and the methods (getName, getAge, and getSalary) into a single unit (the Person class).
+
+The properties are hidden from direct access, and the methods provide a controlled way to interact with the data. This ensures that the internal state of the object is protected and can only be modified or accessed in a controlled manner.
+
+Encapsulation makes the code more modular, secure, and easier to maintain. -->

@@ -1,0 +1,67 @@
+<script>
+    // Define a Parent class with a method
+    class Parent {
+        // Method to display the type of mobile
+        getMobile() {
+            console.log('iPhone 11');
+        }
+    }
+
+    // Define a Child class that extends (inherits from) the Parent class
+    class Child extends Parent {
+        // The Child class does not define any additional methods or properties
+        // It inherits everything from the Parent class
+    }
+
+    // Create an instance of the Child class
+    let obj = new Child();
+
+    // Call the getMobile method, which is inherited from the Parent class
+    obj.getMobile(); // Output: iPhone 11
+</script>
+
+
+<!-- Explanation of Inheritance in This Code:
+Parent Class (Parent):
+
+The Parent class defines a method called getMobile, which logs 'iPhone 11' to the console.
+
+This method represents a behavior or functionality that the Parent class provides.
+
+Child Class (Child):
+
+The Child class is defined using the extends keyword, which means it inherits from the Parent class.
+
+The Child class does not define any additional methods or properties. It simply inherits everything from the Parent class.
+
+Inheritance Mechanism:
+
+When the Child class extends the Parent class, it automatically gains access to all the methods and properties of the Parent class.
+
+In this case, the Child class inherits the getMobile method from the Parent class.
+
+Creating an Instance of Child:
+
+An instance of the Child class is created using let obj = new Child();.
+
+Even though the Child class does not explicitly define the getMobile method, it can still use it because it is inherited from the Parent class.
+
+Calling the Inherited Method:
+
+The getMobile method is called on the obj instance (obj.getMobile()).
+
+Since the Child class inherits this method from the Parent class, the output is 'iPhone 11'.
+
+Key Points of Inheritance in This Code:
+Reusability: The Child class reuses the getMobile method from the Parent class without having to redefine it.
+
+Code Organization: Inheritance helps organize code by creating a logical hierarchy of classes. The Child class can focus on additional or specific behaviors without duplicating code from the Parent class.
+
+Extensibility: The Child class can extend the functionality of the Parent class by adding new methods or overriding existing ones (though overriding is not shown in this example).
+
+Summary:
+Inheritance allows the Child class to acquire the properties and methods of the Parent class.
+
+In this example, the Child class inherits the getMobile method from the Parent class, demonstrating how inheritance promotes code reusability and logical organization.
+
+The Child class can use the inherited method (getMobile) as if it were defined within itself. -->

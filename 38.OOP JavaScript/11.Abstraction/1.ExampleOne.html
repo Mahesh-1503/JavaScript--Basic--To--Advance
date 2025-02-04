@@ -1,0 +1,57 @@
+<script>
+    // Define a class named ATM to simulate an Automated Teller Machine
+    class ATM {
+        // Constructor method to initialize the ATM object with a withdrawal amount
+        constructor(withdraw) {
+            this.balance = 1000; // Initialize the balance with a fixed amount of 1000
+            this.withdraw = withdraw; // Set the withdrawal amount passed as an argument
+        }
+
+        // Method to check if the withdrawal is possible and update the balance accordingly
+        getAmount() {
+            let minimum = 500; // Define the minimum balance that must be maintained
+
+            // Check if the balance after withdrawal is greater than or equal to the minimum balance
+            if ((this.balance - this.withdraw) >= minimum) {
+                console.log(`Withdraw Successful`); // Log success message
+                console.log(`You have withdrawn ${this.withdraw} and your balance is ${this.balance - this.withdraw}`); // Log the new balance
+            } else {
+                console.log("Withdraw Failed"); // Log failure message
+                console.log(`Insufficient balance (Minimum balance should be 500)`); // Log the reason for failure
+            }
+        }
+    }
+
+    // Create an instance of the ATM class with a withdrawal amount of 1000
+    let obj = new ATM(1000);
+
+    // Attempt to access the 'minimum' property directly (which is not defined as a class property)
+    console.log(obj.minimum); // This will log 'undefined' because 'minimum' is a local variable inside the getAmount method
+
+    // Call the getAmount method to attempt the withdrawal
+    obj.getAmount();
+</script>
+
+<!-- Explanation of Abstraction in This Program:
+Encapsulation of Data and Logic:
+
+The ATM class encapsulates the data (like balance and withdraw) and the logic (like getAmount) within itself. This hides the internal details of how the withdrawal process works from the outside world.
+
+The user of the ATM class only needs to know how to create an instance of the class and call the getAmount method. They don't need to know how the balance is checked or how the withdrawal is processed.
+
+Local Variable minimum:
+
+The variable minimum is defined inside the getAmount method, making it a local variable. This means it is not accessible outside of the method, which is a form of abstraction. The user of the class doesn't need to know about this variable or its value; they only need to know that the ATM enforces a minimum balance rule.
+
+Accessing Undefined Property:
+
+The line console.log(obj.minimum); attempts to access a property minimum that doesn't exist as a class property. This demonstrates that the internal details (like the minimum balance rule) are hidden from the user. The user only interacts with the class through its public methods (getAmount).
+
+Method Abstraction:
+
+The getAmount method abstracts the logic of checking the balance and determining if the withdrawal is possible. The user doesn't need to know how this logic is implemented; they just call the method and get the result.
+
+Summary:
+Abstraction in this program is achieved by hiding the internal details of how the ATM works (like the minimum balance rule and the balance check logic) and exposing only the necessary methods (getAmount) to the user.
+
+The user interacts with the ATM class at a higher level, without needing to understand the underlying implementation details. This makes the code easier to use and maintain. -->

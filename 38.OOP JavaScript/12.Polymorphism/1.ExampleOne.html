@@ -1,0 +1,67 @@
+<script>
+    // Define a Parent class with a method
+    class Parent {
+        // Method to display the type of mobile
+        getMobile() {
+            console.log('iPhone 11');
+        }
+    }
+
+    // Define a Child class that extends (inherits from) the Parent class
+    class Child extends Parent {
+        // Override the getMobile method to demonstrate polymorphism
+        getMobile() {
+            console.log('iPhone 15'); // Modified behavior for the Child class
+        }
+    }
+
+    // Create an instance of the Parent class
+    let parentObj = new Parent();
+
+    // Create an instance of the Child class
+    let childObj = new Child();
+
+    // Call the getMobile method on both instances
+    parentObj.getMobile(); // Output: iPhone 11 (behavior of Parent class)
+    childObj.getMobile();  // Output: iPhone 15 (behavior of Child class)
+</script>
+
+<!-- Explanation of Polymorphism in This Code:
+Parent Class (Parent):
+
+The Parent class defines a method called getMobile, which logs 'iPhone 11' to the console.
+
+This method represents a behavior or functionality that the Parent class provides.
+
+Child Class (Child):
+
+The Child class extends the Parent class using the extends keyword, inheriting all properties and methods from the Parent class.
+
+The Child class overrides the getMobile method to provide its own implementation. Instead of logging 'iPhone 11', it logs 'iPhone 15'.
+
+Polymorphism:
+
+Polymorphism is the ability of objects to take on different forms or behaviors depending on their class.
+
+In this example, the getMobile method behaves differently depending on whether it is called on an instance of the Parent class or the Child class.
+
+When getMobile is called on parentObj (an instance of Parent), it executes the Parent class's implementation and logs 'iPhone 11'.
+
+When getMobile is called on childObj (an instance of Child), it executes the Child class's overridden implementation and logs 'iPhone 15'.
+
+Key Points of Polymorphism:
+
+Method Overriding: The Child class overrides the getMobile method to provide a specific implementation. This is a key feature of polymorphism.
+
+Same Method, Different Behavior: The getMobile method behaves differently depending on the object's class, even though the method name is the same.
+
+Flexibility: Polymorphism allows for flexible and extensible code. You can add new classes (e.g., GrandChild) with their own implementations of getMobile without modifying the existing code.
+
+Summary:
+Polymorphism is demonstrated in this code through method overriding.
+
+The Child class overrides the getMobile method inherited from the Parent class to provide its own implementation.
+
+When the getMobile method is called, it behaves differently depending on whether it is called on an instance of the Parent class or the Child class.
+
+This allows for flexible and reusable code, where different classes can provide their own implementations of the same method. -->
